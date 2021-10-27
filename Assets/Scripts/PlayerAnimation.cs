@@ -6,22 +6,25 @@ public class PlayerAnimation : MonoBehaviour
 {
     Animator playerAnimator;
     GameObject player;
+    Rigidbody2D rigidbody2D;
     bool isFacingRight = true;
     // Start is called before the first frame update
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
         player = gameObject;
+        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Vector2 movement = Vector2.zero;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (CheckAnimationPlayingAndTransitioning("Attack"))
             {
-                player.tag = "Attack";
                 playerAnimator.SetTrigger("Attack");
             }
         }
@@ -34,6 +37,7 @@ public class PlayerAnimation : MonoBehaviour
                 {
                     FlipPlayer();
                 }
+                movement.x = (transform.right * Time.deltaTime * -10).x;
             }
             else if (Input.GetKey(KeyCode.D))
             {
@@ -41,25 +45,22 @@ public class PlayerAnimation : MonoBehaviour
                 {
                     FlipPlayer();
                 }
+                movement.x = (transform.right * Time.deltaTime * 10).x;
             }
             if (CheckAnimationPlayingAndTransitioning("Run"))
             {
                 playerAnimator.SetFloat("Speed", 0.1f);
             }
+
+            movement = movement + (Vector2)(transform.position);
+            rigidbody2D.MovePosition(movement);
         }
         else
         {
             playerAnimator.SetFloat("Speed", 0f);
         }
-    }
 
-    void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Attack")
-        {
-            Debug.Log(other.gameObject.tag + "Player Side");
-            playerAnimator.SetTrigger("Damage");
-        }
+
     }
 
     bool CheckAnimationPlayingAndTransitioning(string animationName) => !playerAnimator.GetCurrentAnimatorStateInfo(0).IsName(animationName) && !playerAnimator.IsInTransition(0);
@@ -71,10 +72,5 @@ public class PlayerAnimation : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
-    }
-
-    void CompletedAttack()
-    {
-        player.tag = "Player";
     }
 }
