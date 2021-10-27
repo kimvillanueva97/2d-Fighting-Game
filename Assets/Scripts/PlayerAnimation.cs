@@ -21,6 +21,7 @@ public class PlayerAnimation : MonoBehaviour
     void Update()
     {
         Vector2 movement = Vector2.zero;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (CheckAnimationPlayingAndTransitioning("Attack"))
@@ -31,13 +32,14 @@ public class PlayerAnimation : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
+            UnfreezeX();
             if (Input.GetKey(KeyCode.A))
             {
                 if (isFacingRight)
                 {
                     FlipPlayer();
                 }
-                movement.x = (transform.right * Time.deltaTime * -10).x;
+                movement.x = (transform.right * -10 * Time.deltaTime).x;
             }
             else if (Input.GetKey(KeyCode.D))
             {
@@ -45,7 +47,7 @@ public class PlayerAnimation : MonoBehaviour
                 {
                     FlipPlayer();
                 }
-                movement.x = (transform.right * Time.deltaTime * 10).x;
+                movement.x = (transform.right * 10 * Time.deltaTime).x;
             }
             if (CheckAnimationPlayingAndTransitioning("Run"))
             {
@@ -58,6 +60,7 @@ public class PlayerAnimation : MonoBehaviour
         else
         {
             playerAnimator.SetFloat("Speed", 0f);
+            FreezePosition();
         }
     }
 
@@ -70,5 +73,15 @@ public class PlayerAnimation : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    void UnfreezeX()
+    {
+        rigidbody2D.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
+    }
+
+    void FreezePosition()
+    {
+        rigidbody2D.constraints = ~RigidbodyConstraints2D.FreezeRotation;
     }
 }

@@ -21,7 +21,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 778247125257796293, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
       propertyPath: m_Constraints
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4464987406117850141, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
       propertyPath: m_RootOrder
