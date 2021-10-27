@@ -7,6 +7,7 @@ public class PlayerAnimation : MonoBehaviour
     Animator playerAnimator;
     GameObject player;
     Rigidbody2D rigidbody2D;
+    RigidbodyConstraints2D rigidbodyConstraints2D;
     bool isFacingRight = true;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,6 @@ public class PlayerAnimation : MonoBehaviour
     void Update()
     {
         Vector2 movement = Vector2.zero;
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (CheckAnimationPlayingAndTransitioning("Attack"))
@@ -59,8 +59,6 @@ public class PlayerAnimation : MonoBehaviour
         {
             playerAnimator.SetFloat("Speed", 0f);
         }
-
-
     }
 
     bool CheckAnimationPlayingAndTransitioning(string animationName) => !playerAnimator.GetCurrentAnimatorStateInfo(0).IsName(animationName) && !playerAnimator.IsInTransition(0);
