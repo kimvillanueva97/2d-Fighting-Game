@@ -20,13 +20,25 @@ public class DamageHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(other.gameObject);
-        if (other.gameObject.tag == "Weapon")
+        if (gameObject.tag == "Enemy")
         {
-            animator.SetTrigger("Damage");
-            currentHealth -= 10f;
-            if (currentHealth <= 0) currentHealth = 100;
-            HealthBar.SetValueWithoutNotify(currentHealth);
+            if (other.gameObject.tag == "PWeapon")
+            {
+                animator.SetTrigger("Damage");
+                currentHealth -= 10f;
+                if (currentHealth <= 0) currentHealth = 100;
+                HealthBar.SetValueWithoutNotify(currentHealth);
+            }
+        }
+        else
+        {
+            if (other.gameObject.tag == "EWeapon")
+            {
+                animator.SetTrigger("Damage");
+                currentHealth -= 10f;
+                if (currentHealth <= 0) currentHealth = 100;
+                HealthBar.SetValueWithoutNotify(currentHealth);
+            }
         }
     }
 }

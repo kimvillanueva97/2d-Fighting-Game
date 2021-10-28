@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HadoukenHandler : MonoBehaviour
 {
-    Rigidbody2D rigidbody2D;
+    new Rigidbody2D rigidbody2D;
     float thrust = 1f;
     // Start is called before the first frame update
     void Start()
@@ -14,6 +14,6 @@ public class HadoukenHandler : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidbody2D.AddForce(transform.right);
+        rigidbody2D.AddForce(transform.right * thrust);
     }
 }

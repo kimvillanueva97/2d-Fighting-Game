@@ -71,6 +71,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4464987406117850143, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464987406238093883, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
+      propertyPath: m_TagString
+      value: EWeapon
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4464987406117850138, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 030de12807b7e1048b8c937119871c7d, type: 3}

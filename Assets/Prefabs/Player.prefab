@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be92b232463928f40a60a0bf9c8f9761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hadouken: {fileID: 0}
 --- !u!114 &4736186059306207948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +183,7 @@ GameObject:
   - component: {fileID: 4464987406238093881}
   m_Layer: 0
   m_Name: Sword_Hitbox
-  m_TagString: Weapon
+  m_TagString: PWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
