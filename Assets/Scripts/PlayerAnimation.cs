@@ -7,7 +7,6 @@ public class PlayerAnimation : MonoBehaviour
     Animator playerAnimator;
     GameObject player;
     Rigidbody2D rigidbody2D;
-    RigidbodyConstraints2D rigidbodyConstraints2D;
     bool isFacingRight = true;
     // Start is called before the first frame update
     void Start()
