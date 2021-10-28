@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be92b232463928f40a60a0bf9c8f9761, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hadouken: {fileID: 0}
+  hadouken: {fileID: 8803059860139490789, guid: 8cfa83591fe65494485d086d84774075, type: 3}
 --- !u!114 &4736186059306207948
 MonoBehaviour:
   m_ObjectHideFlags: 0

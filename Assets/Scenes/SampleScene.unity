@@ -140,10 +140,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4464987406117850138, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
-      propertyPath: hadouken
-      value: 
-      objectReference: {fileID: 8803059860139490789, guid: 8cfa83591fe65494485d086d84774075, type: 3}
     - target: {fileID: 4464987406117850141, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
       propertyPath: m_RootOrder
       value: 2
