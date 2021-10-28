@@ -140,6 +140,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4464987406117850138, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
+      propertyPath: hadouken
+      value: 
+      objectReference: {fileID: 8803059860139490789, guid: 8cfa83591fe65494485d086d84774075, type: 3}
     - target: {fileID: 4464987406117850141, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -189,7 +193,7 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4736186059306207948, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
-      propertyPath: leftHealth
+      propertyPath: Health
       value: 
       objectReference: {fileID: 22324256}
     m_RemovedComponents: []
@@ -548,12 +552,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    - target: {fileID: 814854609598751598, guid: 625b4808f2d2c104f818821c82bba084, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8575543841151313341, guid: 625b4808f2d2c104f818821c82bba084, type: 3}
-      propertyPath: leftHealth
+      propertyPath: Health
       value: 
       objectReference: {fileID: 727983166}
     m_RemovedComponents: []

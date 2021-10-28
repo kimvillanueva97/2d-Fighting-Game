@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class DamageHandler : MonoBehaviour
 {
     Animator animator;
-    [SerializeField] GameObject leftHealth;
+    [SerializeField] GameObject Health;
     Slider HealthBar;
     float currentHealth;
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-        HealthBar = leftHealth.GetComponent<Slider>();
+        HealthBar = Health.GetComponent<Slider>();
         currentHealth = HealthBar.value;
 
     }

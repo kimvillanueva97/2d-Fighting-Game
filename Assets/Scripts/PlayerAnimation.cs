@@ -6,6 +6,7 @@ public class PlayerAnimation : MonoBehaviour
 {
     Animator playerAnimator;
     GameObject player;
+    [SerializeField] GameObject hadouken;
     Rigidbody2D rigidbody2D;
     bool isFacingRight = true;
     // Start is called before the first frame update
@@ -26,6 +27,8 @@ public class PlayerAnimation : MonoBehaviour
             if (CheckAnimationPlayingAndTransitioning("Attack"))
             {
                 playerAnimator.SetTrigger("Attack");
+
+                Instantiate(hadouken, transform.position, Quaternion.identity);
             }
         }
 
