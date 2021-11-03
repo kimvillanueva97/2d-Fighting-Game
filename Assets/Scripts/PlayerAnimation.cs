@@ -22,15 +22,15 @@ public class PlayerAnimation : MonoBehaviour
     {
         Vector2 movement = Vector2.zero;
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (CheckAnimationPlayingAndTransitioning("Attack") || CheckAnimationPlayingAndTransitioning("Attack2") || CheckAnimationPlayingAndTransitioning("Attack3"))
-            {
-                playerAnimator.SetTrigger("Attack");
-                hadouken.tag = "PWeapon";
-                Instantiate(hadouken, transform.position, Quaternion.identity);
-            }
-        }
+        // if (Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     if (CheckAnimationPlayingAndTransitioning("Idle"))
+        //     {
+        //         playerAnimator.SetTrigger("Attack");
+        //         hadouken.tag = "PWeapon";
+        //         Instantiate(hadouken, transform.position, Quaternion.identity);
+        //     }
+        // }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
@@ -51,7 +51,7 @@ public class PlayerAnimation : MonoBehaviour
                 }
                 movement.x = (transform.right * 10 * Time.deltaTime).x;
             }
-            if (CheckAnimationPlayingAndTransitioning("Run"))
+            if (!CheckAnimationPlayingAndTransitioning("Run"))
             {
                 playerAnimator.SetFloat("Speed", 0.1f);
             }
@@ -66,7 +66,7 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
 
-    bool CheckAnimationPlayingAndTransitioning(string animationName) => !playerAnimator.GetCurrentAnimatorStateInfo(0).IsName(animationName) && !playerAnimator.IsInTransition(0);
+    bool CheckAnimationPlayingAndTransitioning(string animationName) => playerAnimator.GetCurrentAnimatorStateInfo(0).IsName(animationName) && !playerAnimator.IsInTransition(0);
 
     void FlipPlayer()
     {
