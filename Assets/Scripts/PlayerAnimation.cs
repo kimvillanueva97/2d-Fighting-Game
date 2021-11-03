@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
+    public static PlayerAnimation instance;
     Animator playerAnimator;
-    GameObject player;
-    [SerializeField] GameObject hadouken;
+    public GameObject player;
+    [SerializeField] public GameObject hadouken;
     new Rigidbody2D rigidbody2D;
     bool isFacingRight = true;
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         playerAnimator = GetComponent<Animator>();
         player = gameObject;
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -21,16 +23,6 @@ public class PlayerAnimation : MonoBehaviour
     void Update()
     {
         Vector2 movement = Vector2.zero;
-
-        // if (Input.GetKeyDown(KeyCode.Space))
-        // {
-        //     if (CheckAnimationPlayingAndTransitioning("Idle"))
-        //     {
-        //         playerAnimator.SetTrigger("Attack");
-        //         hadouken.tag = "PWeapon";
-        //         Instantiate(hadouken, transform.position, Quaternion.identity);
-        //     }
-        // }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {

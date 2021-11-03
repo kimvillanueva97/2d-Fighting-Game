@@ -17,6 +17,13 @@ public class AttackDefault : StateMachineBehaviour
         {
             animator.Play("Attack");
         }
+        else if (Input.GetKeyDown(KeyCode.F))
+        {
+            GameObject hadouken = PlayerAnimation.instance.hadouken;
+            hadouken.tag = "PWeapon";
+            GameObject player = PlayerAnimation.instance.player;
+            Instantiate(hadouken, player.transform.position, Quaternion.identity);
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
