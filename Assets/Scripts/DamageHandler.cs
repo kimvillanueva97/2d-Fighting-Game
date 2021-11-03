@@ -7,6 +7,7 @@ public class DamageHandler : MonoBehaviour
 {
     Animator animator;
     [SerializeField] GameObject Health;
+    [SerializeField] Image HealthBackground;
     Slider HealthBar;
     float currentHealth;
     // Start is called before the first frame update
@@ -15,7 +16,6 @@ public class DamageHandler : MonoBehaviour
         animator = GetComponent<Animator>();
         HealthBar = Health.GetComponent<Slider>();
         currentHealth = HealthBar.value;
-
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -37,8 +37,16 @@ public class DamageHandler : MonoBehaviour
                 animator.SetTrigger("Damage");
                 currentHealth -= 10f;
                 if (currentHealth <= 0) currentHealth = 100;
-                HealthBar.SetValueWithoutNotify(currentHealth);
             }
+        }
+    }
+
+    void Update()
+    {
+        HealthBar.value = Mathf.Lerp(HealthBar.value, currentHealth, 2f * Time.deltaTime);
+        if (HealthBackground)
+        {
+            HealthBackground.fillAmount = currentHealth / 100;
         }
     }
 }
