@@ -24,7 +24,7 @@ public class PlayerAnimation : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (CheckAnimationPlayingAndTransitioning("Attack"))
+            if (CheckAnimationPlayingAndTransitioning("Attack") || CheckAnimationPlayingAndTransitioning("Attack2") || CheckAnimationPlayingAndTransitioning("Attack3"))
             {
                 playerAnimator.SetTrigger("Attack");
                 hadouken.tag = "PWeapon";
