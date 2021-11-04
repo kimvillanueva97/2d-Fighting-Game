@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class EnemyAnimation : MonoBehaviour
 {
-    Animator playerAnimator;
-    GameObject player;
+    public static EnemyAnimation instance;
+    Animator enemyAnimator;
+    public GameObject enemy;
     new Rigidbody2D rigidbody2D;
     bool isFacingRight = true;
     // Start is called before the first frame update
     void Start()
     {
-        playerAnimator = GetComponent<Animator>();
-        player = gameObject;
+        instance = this;
+        enemyAnimator = GetComponent<Animator>();
+        enemy = gameObject;
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
@@ -20,14 +22,6 @@ public class EnemyAnimation : MonoBehaviour
     void Update()
     {
         Vector2 movement = Vector2.zero;
-
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            if (CheckAnimationPlayingAndTransitioning("Attack"))
-            {
-                playerAnimator.SetTrigger("Attack");
-            }
-        }
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
@@ -50,7 +44,7 @@ public class EnemyAnimation : MonoBehaviour
             }
             if (CheckAnimationPlayingAndTransitioning("Run"))
             {
-                playerAnimator.SetFloat("Speed", 0.1f);
+                enemyAnimator.SetFloat("Speed", 0.1f);
             }
 
             movement = movement + (Vector2)(transform.position);
@@ -58,12 +52,12 @@ public class EnemyAnimation : MonoBehaviour
         }
         else
         {
-            playerAnimator.SetFloat("Speed", 0f);
+            enemyAnimator.SetFloat("Speed", 0f);
             FreezePosition();
         }
     }
 
-    bool CheckAnimationPlayingAndTransitioning(string animationName) => !playerAnimator.GetCurrentAnimatorStateInfo(0).IsName(animationName) && !playerAnimator.IsInTransition(0);
+    bool CheckAnimationPlayingAndTransitioning(string animationName) => !enemyAnimator.GetCurrentAnimatorStateInfo(0).IsName(animationName) && !enemyAnimator.IsInTransition(0);
 
     void FlipPlayer()
     {

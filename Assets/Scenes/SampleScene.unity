@@ -468,18 +468,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1128107026481977556, guid: 0f429e276ccf41243ad69277191cd3a3, type: 3}
-      propertyPath: m_Type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128107026481977556, guid: 0f429e276ccf41243ad69277191cd3a3, type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128107026481977556, guid: 0f429e276ccf41243ad69277191cd3a3, type: 3}
-      propertyPath: m_FillMethod
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1128107027839421060, guid: 0f429e276ccf41243ad69277191cd3a3, type: 3}
       propertyPath: m_Name
       value: Left Health Bar
@@ -566,22 +554,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1128107027839421061, guid: 0f429e276ccf41243ad69277191cd3a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1128107027839421063, guid: 0f429e276ccf41243ad69277191cd3a3, type: 3}
-      propertyPath: m_Value
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356260518053397395, guid: 0f429e276ccf41243ad69277191cd3a3, type: 3}
-      propertyPath: m_Type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356260518053397395, guid: 0f429e276ccf41243ad69277191cd3a3, type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356260518053397395, guid: 0f429e276ccf41243ad69277191cd3a3, type: 3}
-      propertyPath: m_FillMethod
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

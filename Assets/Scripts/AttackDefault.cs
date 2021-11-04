@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AttackDefault : StateMachineBehaviour
 {
+    [SerializeField] GameObject hadouken;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -13,17 +14,33 @@ public class AttackDefault : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (animator.tag == "Player")
         {
-            animator.Play("Attack");
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                animator.Play("Attack");
+            }
+            else if (Input.GetKeyDown(KeyCode.F))
+            {
+                hadouken.tag = "PWeapon";
+                GameObject player = PlayerAnimation.instance.player;
+                Instantiate(hadouken, player.transform.position, Quaternion.identity);
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.F))
+        else if (animator.tag == "Enemy")
         {
-            GameObject hadouken = PlayerAnimation.instance.hadouken;
-            hadouken.tag = "PWeapon";
-            GameObject player = PlayerAnimation.instance.player;
-            Instantiate(hadouken, player.transform.position, Quaternion.identity);
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                animator.Play("Attack");
+            }
+            else if (Input.GetKeyDown(KeyCode.K))
+            {
+                hadouken.tag = "EWeapon";
+                GameObject enemy = EnemyAnimation.instance.enemy;
+                Instantiate(hadouken, enemy.transform.position, Quaternion.identity);
+            }
         }
+
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

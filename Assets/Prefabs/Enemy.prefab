@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4464987406117850139, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ad51c154197ef5d4bbbcbf250bdabb37, type: 2}
     - target: {fileID: 4464987406117850141, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
       propertyPath: m_RootOrder
       value: 0

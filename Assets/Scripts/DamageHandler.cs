@@ -24,21 +24,36 @@ public class DamageHandler : MonoBehaviour
         {
             if (other.gameObject.tag == "PWeapon")
             {
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || animator.GetCurrentAnimatorStateInfo(0).IsName("Block"))
+                {
+                    animator.Play("Block");
+                    DamageTaken(3f);
+                    return;
+                }
                 animator.SetTrigger("Damage");
-                currentHealth -= 10f;
-                if (currentHealth <= 0) currentHealth = 100;
-                HealthBar.SetValueWithoutNotify(currentHealth);
+                DamageTaken(10f);
             }
         }
         else
         {
             if (other.gameObject.tag == "EWeapon")
             {
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || animator.GetCurrentAnimatorStateInfo(0).IsName("Block"))
+                {
+                    animator.Play("Block");
+                    DamageTaken(3f);
+                    return;
+                }
                 animator.SetTrigger("Damage");
-                currentHealth -= 10f;
-                if (currentHealth <= 0) currentHealth = 100;
+                DamageTaken(10f);
             }
         }
+    }
+
+    void DamageTaken(float damage)
+    {
+        currentHealth -= damage;
+        if (currentHealth <= 0) currentHealth = 100;
     }
 
     void Update()

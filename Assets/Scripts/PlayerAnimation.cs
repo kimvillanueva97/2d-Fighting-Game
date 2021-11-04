@@ -6,7 +6,6 @@ public class PlayerAnimation : MonoBehaviour
 {
     public static PlayerAnimation instance;
     public GameObject player;
-    [SerializeField] public GameObject hadouken;
     Animator playerAnimator;
     new Rigidbody2D rigidbody2D;
     bool isFacingRight = true;
