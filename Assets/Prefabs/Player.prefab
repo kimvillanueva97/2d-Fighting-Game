@@ -157,7 +157,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  hadouken: {fileID: 8803059860139490789, guid: 8cfa83591fe65494485d086d84774075, type: 3}
 --- !u!114 &4736186059306207948
 MonoBehaviour:
   m_ObjectHideFlags: 0
