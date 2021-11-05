@@ -30,7 +30,7 @@ public class DamageHandler : MonoBehaviour
                     DamageTaken(3f);
                     return;
                 }
-                animator.SetTrigger("Damage");
+                animator.Play("Damage");
                 DamageTaken(10f);
             }
         }
@@ -44,7 +44,7 @@ public class DamageHandler : MonoBehaviour
                     DamageTaken(3f);
                     return;
                 }
-                animator.SetTrigger("Damage");
+                animator.Play("Damage");
                 DamageTaken(10f);
             }
         }

@@ -377,6 +377,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5092522300437180582, guid: c02418988e9549e41b8820f27f79a83d, type: 3}
   m_PrefabInstance: {fileID: 5092522300888323227}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &727983166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5092522300437180581, guid: c02418988e9549e41b8820f27f79a83d, type: 3}
+  m_PrefabInstance: {fileID: 5092522300888323227}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1107114432 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1128107027839421060, guid: 0f429e276ccf41243ad69277191cd3a3, type: 3}
@@ -401,6 +406,7 @@ GameObject:
   - component: {fileID: 1185555037}
   - component: {fileID: 1185555038}
   - component: {fileID: 1185555039}
+  - component: {fileID: 1185555040}
   m_Layer: 0
   m_Name: Ramnza
   m_TagString: Enemy
@@ -541,7 +547,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1257a4a5bed2ef445a337e98a47292fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1185555033}
+--- !u!114 &1185555040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185555033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282a3d45d7f151647adba773c8875be5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: {fileID: 727983166}
+  HealthBackground: {fileID: 0}
 --- !u!1001 &1128107026765886276
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -32,7 +32,7 @@ public class RamnzaAnimation : MonoBehaviour
                 {
                     // FlipPlayer();
                 }
-                if (!CheckAnimationPlayingAndTransitioning("BWalk"))
+                if (!CheckAnimationPlayingAndTransitioning("BWalk") && !CheckAnimationPlayingAndTransitioning("Damage"))
                 {
                     playerAnimator.Play("BWalk");
                 }
@@ -44,7 +44,7 @@ public class RamnzaAnimation : MonoBehaviour
                 {
                     // FlipPlayer();
                 }
-                if (!CheckAnimationPlayingAndTransitioning("FWalk"))
+                if (!CheckAnimationPlayingAndTransitioning("FWalk") && !CheckAnimationPlayingAndTransitioning("Damage"))
                 {
                     playerAnimator.Play("FWalk");
                 }
