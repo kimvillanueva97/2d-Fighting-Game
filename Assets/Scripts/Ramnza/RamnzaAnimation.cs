@@ -22,6 +22,7 @@ public class RamnzaAnimation : MonoBehaviour
     void Update()
     {
         Vector2 movement = Vector2.zero;
+        if (CheckAnimationPlayingAndTransitioning("Damage") || CheckAnimationPlayingAndTransitioning("Block")) return;
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
