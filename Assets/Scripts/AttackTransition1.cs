@@ -12,9 +12,20 @@ public class AttackTransition1 : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (animator.tag == "Player")
         {
-            animator.Play("Attack2");
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                animator.Play("Attack2");
+            }
+
+        }
+        else if (animator.tag == "Enemy")
+        {
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                animator.Play("Attack2");
+            }
         }
     }
 
