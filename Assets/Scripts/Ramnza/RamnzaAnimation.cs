@@ -9,6 +9,8 @@ public class RamnzaAnimation : MonoBehaviour
     Animator playerAnimator;
     new Rigidbody2D rigidbody2D;
     bool isFacingRight = true;
+    public bool isDamaged = false;
+    public bool isBlocking = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class RamnzaAnimation : MonoBehaviour
     void Update()
     {
         Vector2 movement = Vector2.zero;
-        if (CheckAnimationPlayingAndTransitioning("Damage") || CheckAnimationPlayingAndTransitioning("Block")) return;
+        if (isDamaged || isBlocking) return;
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
@@ -37,7 +39,7 @@ public class RamnzaAnimation : MonoBehaviour
                 {
                     playerAnimator.Play("BWalk");
                 }
-                movement.x = (transform.right * -10 * Time.deltaTime).x;
+                movement.x = (transform.right * -1 * Time.deltaTime).x;
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
@@ -49,7 +51,7 @@ public class RamnzaAnimation : MonoBehaviour
                 {
                     playerAnimator.Play("FWalk");
                 }
-                movement.x = (transform.right * 10 * Time.deltaTime).x;
+                movement.x = (transform.right * 1 * Time.deltaTime).x;
             }
 
             movement = movement + (Vector2)(transform.position);
@@ -57,15 +59,15 @@ public class RamnzaAnimation : MonoBehaviour
         }
         else
         {
-            // if (!CheckAnimationPlayingAndTransitioning("Idle") && !CheckAnimationPlayingAndTransitioning("Damage"))
-            // {
-            //     playerAnimator.Play("Idle");
-            // }
+            if (!CheckAnimationPlayingAndTransitioning("Idle") && !CheckAnimationPlayingAndTransitioning("Damage"))
+            {
+                playerAnimator.Play("Idle");
+            }
             FreezePosition();
         }
     }
 
-    bool CheckAnimationPlayingAndTransitioning(string animationName) => playerAnimator.GetCurrentAnimatorStateInfo(0).IsName(animationName) && !playerAnimator.IsInTransition(0);
+    bool CheckAnimationPlayingAndTransitioning(string animationName) => playerAnimator.GetCurrentAnimatorStateInfo(0).IsName(animationName) && playerAnimator.GetAnimatorTransitionInfo(0).duration > 0;
 
     void FlipPlayer()
     {

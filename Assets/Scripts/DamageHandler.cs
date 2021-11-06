@@ -27,9 +27,11 @@ public class DamageHandler : MonoBehaviour
                 if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle") || animator.GetCurrentAnimatorStateInfo(0).IsName("Block"))
                 {
                     animator.Play("Block");
+
                     DamageTaken(3f);
                     return;
                 }
+                Debug.Log("Damage");
                 animator.Play("Damage");
                 DamageTaken(10f);
             }
@@ -49,7 +51,6 @@ public class DamageHandler : MonoBehaviour
             }
         }
     }
-
     void DamageTaken(float damage)
     {
         currentHealth -= damage;
