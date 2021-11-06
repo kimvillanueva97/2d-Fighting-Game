@@ -59,10 +59,10 @@ public class RamnzaAnimation : MonoBehaviour
         }
         else
         {
-            if (!CheckAnimationPlayingAndTransitioning("Idle") && !CheckAnimationPlayingAndTransitioning("Damage"))
-            {
-                playerAnimator.Play("Idle");
-            }
+            // if (!CheckAnimationPlayingAndTransitioning("Idle") && !CheckAnimationPlayingAndTransitioning("Damage"))
+            // {
+            //     playerAnimator.Play("Idle");
+            // }
             FreezePosition();
         }
     }
