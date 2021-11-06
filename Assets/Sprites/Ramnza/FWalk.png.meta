@@ -3,17 +3,17 @@ guid: 6370178b8695a9e4a943440e106a07dd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4944230376442633554
-    second: Run_0
+      213: 1366415992144904114
+    second: FWalk_0
   - first:
-      213: -2274363484027164459
-    second: Run_1
+      213: -8623152956252659832
+    second: FWalk_1
   - first:
-      213: 8284087734974297348
-    second: Run_2
+      213: 1923966015685990636
+    second: FWalk_2
   - first:
-      213: 5304202850863732263
-    second: Run_3
+      213: 4781953232386734242
+    second: FWalk_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run_0
+      name: FWalk_0
       rect:
         serializedVersion: 2
-        x: 71
-        y: 673
-        width: 170
-        height: 283
+        x: 0
+        y: 230
+        width: 179
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,20 +117,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25d1f8be45f6d9440800000000000000
-      internalID: 4944230376442633554
+      spriteID: 2bfb533fa1c76f210800000000000000
+      internalID: 1366415992144904114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_1
+      name: FWalk_1
       rect:
         serializedVersion: 2
-        x: 245
-        y: 673
-        width: 170
-        height: 283
+        x: 179
+        y: 230
+        width: 179
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -138,20 +138,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d8e07c1676df60e0800000000000000
-      internalID: -2274363484027164459
+      spriteID: 88f53bed218645880800000000000000
+      internalID: -8623152956252659832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_2
+      name: FWalk_2
       rect:
         serializedVersion: 2
-        x: 71
-        y: 377
-        width: 170
-        height: 283
+        x: 358
+        y: 230
+        width: 179
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 405305b67edf6f270800000000000000
-      internalID: 8284087734974297348
+      spriteID: ce813ecc5ec43ba10800000000000000
+      internalID: 1923966015685990636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run_3
+      name: FWalk_3
       rect:
         serializedVersion: 2
-        x: 245
-        y: 379
-        width: 170
-        height: 283
+        x: 537
+        y: 230
+        width: 179
+        height: 282
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 726d856d3605c9940800000000000000
-      internalID: 5304202850863732263
+      spriteID: 2a831f40129ec5240800000000000000
+      internalID: 4781953232386734242
       vertices: []
       indices: 
       edges: []

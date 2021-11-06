@@ -459,7 +459,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4.6875, y: 8.53125}
+  m_Size: {x: 5.59375, y: 8.8125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -548,6 +548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1185555033}
+  isDamaged: 0
+  isBlocking: 0
 --- !u!114 &1185555040
 MonoBehaviour:
   m_ObjectHideFlags: 0
