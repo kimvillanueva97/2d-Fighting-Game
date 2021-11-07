@@ -29,6 +29,11 @@ public class RamnzaAnimation : MonoBehaviour
     {
         Vector2 movement = Vector2.zero;
 
+        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            FaceDirection();
+        }
+
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
             UnfreezeX();
@@ -77,8 +82,6 @@ public class RamnzaAnimation : MonoBehaviour
 
     void UpdateMovementDirection()
     {
-        FaceDirection();
-
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             if (isFacingRight) animParamSpeed = -1;
