@@ -10,6 +10,9 @@ public class RamnzaAnimation : MonoBehaviour
     Animator playerAnimator;
     new Rigidbody2D rigidbody2D;
     bool isFacingRight = true;
+    float moveSpeed = 0;
+    float animParamSpeed = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +20,8 @@ public class RamnzaAnimation : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
         player = gameObject;
         rigidbody2D = GetComponent<Rigidbody2D>();
+        FaceDirection();
+        UpdateMovementDirection();
     }
 
     // Update is called once per frame
@@ -24,26 +29,26 @@ public class RamnzaAnimation : MonoBehaviour
     {
         Vector2 movement = Vector2.zero;
 
-        FaceDirection();
-
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
             UnfreezeX();
             if (Input.GetKey(KeyCode.LeftArrow))
             {
+                UpdateMovementDirection();
                 if (!CheckAnimationPlayingAndTransitioning("Damage"))
                 {
-                    playerAnimator.SetFloat("Speed", -1f);
+                    playerAnimator.SetFloat("Speed", animParamSpeed);
                 }
-                movement.x = (transform.right * -1 * Time.deltaTime).x;
+                movement.x = (transform.right * moveSpeed * Time.deltaTime).x;
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
+                UpdateMovementDirection();
                 if (!CheckAnimationPlayingAndTransitioning("Damage"))
                 {
-                    playerAnimator.SetFloat("Speed", 1f);
+                    playerAnimator.SetFloat("Speed", animParamSpeed);
                 }
-                movement.x = (transform.right * 1 * Time.deltaTime).x;
+                movement.x = (transform.right * moveSpeed * Time.deltaTime).x;
             }
 
             movement = movement + (Vector2)(transform.position);
@@ -70,6 +75,25 @@ public class RamnzaAnimation : MonoBehaviour
         transform.localScale = theScale;
     }
 
+    void UpdateMovementDirection()
+    {
+        FaceDirection();
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            if (isFacingRight) animParamSpeed = -1;
+            else animParamSpeed = 1;
+            moveSpeed = -1;
+        }
+
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            if (isFacingRight) animParamSpeed = 1;
+            else animParamSpeed = -1;
+            moveSpeed = 1;
+        }
+    }
+
     void UnfreezeX()
     {
         rigidbody2D.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
@@ -87,11 +111,11 @@ public class RamnzaAnimation : MonoBehaviour
 
         float enemyDirection = playerPosition - enemyPosition;
 
-        if (isFacingRight && enemyDirection < 0)
+        if (isFacingRight && enemyDirection > 0)
         {
             FlipPlayer();
         }
-        else if (!isFacingRight && enemyDirection > 0)
+        else if (!isFacingRight && enemyDirection < 0)
         {
             FlipPlayer();
         }
