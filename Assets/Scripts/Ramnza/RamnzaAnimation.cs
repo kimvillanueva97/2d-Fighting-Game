@@ -32,7 +32,7 @@ public class RamnzaAnimation : MonoBehaviour
                 {
                     // FlipPlayer();
                 }
-                if (!CheckAnimationPlayingAndTransitioning("BWalk") && !CheckAnimationPlayingAndTransitioning("Damage"))
+                if (!CheckAnimationPlayingAndTransitioning("Damage"))
                 {
                     playerAnimator.SetFloat("Speed", -1f);
                 }
@@ -44,7 +44,7 @@ public class RamnzaAnimation : MonoBehaviour
                 {
                     // FlipPlayer();
                 }
-                if (!CheckAnimationPlayingAndTransitioning("FWalk") && !CheckAnimationPlayingAndTransitioning("Damage"))
+                if (!CheckAnimationPlayingAndTransitioning("Damage"))
                 {
                     playerAnimator.SetFloat("Speed", 1f);
                 }
@@ -56,10 +56,6 @@ public class RamnzaAnimation : MonoBehaviour
         }
         else
         {
-            // if (!CheckAnimationPlayingAndTransitioning("Idle") && !CheckAnimationPlayingAndTransitioning("Damage"))
-            // {
-            //     playerAnimator.Play("Idle");
-            // }
             if (playerAnimator.GetFloat("Speed") != 0f)
             {
                 playerAnimator.SetFloat("Speed", 0f);
