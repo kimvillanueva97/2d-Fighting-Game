@@ -34,7 +34,7 @@ public class RamnzaAnimation : MonoBehaviour
                 }
                 if (!CheckAnimationPlayingAndTransitioning("BWalk") && !CheckAnimationPlayingAndTransitioning("Damage"))
                 {
-                    playerAnimator.SetFloat("Speed", 1f);
+                    playerAnimator.SetFloat("Speed", -1f);
                 }
                 movement.x = (transform.right * -1 * Time.deltaTime).x;
             }
@@ -46,7 +46,7 @@ public class RamnzaAnimation : MonoBehaviour
                 }
                 if (!CheckAnimationPlayingAndTransitioning("FWalk") && !CheckAnimationPlayingAndTransitioning("Damage"))
                 {
-                    playerAnimator.SetFloat("Speed", -1f);
+                    playerAnimator.SetFloat("Speed", 1f);
                 }
                 movement.x = (transform.right * 1 * Time.deltaTime).x;
             }
