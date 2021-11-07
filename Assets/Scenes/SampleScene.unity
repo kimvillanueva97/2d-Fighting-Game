@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4464987406117850141, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.352
       objectReference: {fileID: 0}
     - target: {fileID: 4464987406117850141, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -473,7 +473,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185555033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.507, y: -0.147, z: 0}
+  m_LocalPosition: {x: 1.438, y: -0.147, z: 0}
   m_LocalScale: {x: 0.16597186, y: 0.153777, z: 1}
   m_Children:
   - {fileID: 1634881913}
@@ -549,8 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1185555033}
-  isDamaged: 0
-  isBlocking: 0
+  enemy: {fileID: 1772130208}
 --- !u!114 &1185555040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,6 +673,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1772130208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4464987406117850143, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
+  m_PrefabInstance: {fileID: 36518797}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1128107026765886276
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class RamnzaAnimation : MonoBehaviour
 {
     public static RamnzaAnimation instance;
     public GameObject player;
+    [SerializeField] GameObject enemy;
     Animator playerAnimator;
     new Rigidbody2D rigidbody2D;
     bool isFacingRight = true;
@@ -23,15 +24,13 @@ public class RamnzaAnimation : MonoBehaviour
     {
         Vector2 movement = Vector2.zero;
 
+        FaceDirection();
+
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
             UnfreezeX();
             if (Input.GetKey(KeyCode.LeftArrow))
             {
-                if (isFacingRight)
-                {
-                    // FlipPlayer();
-                }
                 if (!CheckAnimationPlayingAndTransitioning("Damage"))
                 {
                     playerAnimator.SetFloat("Speed", -1f);
@@ -40,10 +39,6 @@ public class RamnzaAnimation : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
-                if (!isFacingRight)
-                {
-                    // FlipPlayer();
-                }
                 if (!CheckAnimationPlayingAndTransitioning("Damage"))
                 {
                     playerAnimator.SetFloat("Speed", 1f);
@@ -83,5 +78,22 @@ public class RamnzaAnimation : MonoBehaviour
     void FreezePosition()
     {
         rigidbody2D.constraints = ~RigidbodyConstraints2D.FreezeRotation;
+    }
+
+    void FaceDirection()
+    {
+        float playerPosition = player.transform.position.x;
+        float enemyPosition = enemy.transform.position.x;
+
+        float enemyDirection = playerPosition - enemyPosition;
+
+        if (isFacingRight && enemyDirection < 0)
+        {
+            FlipPlayer();
+        }
+        else if (!isFacingRight && enemyDirection > 0)
+        {
+            FlipPlayer();
+        }
     }
 }
