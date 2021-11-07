@@ -9,8 +9,6 @@ public class RamnzaAnimation : MonoBehaviour
     Animator playerAnimator;
     new Rigidbody2D rigidbody2D;
     bool isFacingRight = true;
-    public bool isDamaged = false;
-    public bool isBlocking = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +22,6 @@ public class RamnzaAnimation : MonoBehaviour
     void Update()
     {
         Vector2 movement = Vector2.zero;
-        if (isDamaged || isBlocking) return;
 
         if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
@@ -37,7 +34,7 @@ public class RamnzaAnimation : MonoBehaviour
                 }
                 if (!CheckAnimationPlayingAndTransitioning("BWalk") && !CheckAnimationPlayingAndTransitioning("Damage"))
                 {
-                    playerAnimator.Play("BWalk");
+                    playerAnimator.SetFloat("Speed", 1f);
                 }
                 movement.x = (transform.right * -1 * Time.deltaTime).x;
             }
@@ -49,7 +46,7 @@ public class RamnzaAnimation : MonoBehaviour
                 }
                 if (!CheckAnimationPlayingAndTransitioning("FWalk") && !CheckAnimationPlayingAndTransitioning("Damage"))
                 {
-                    playerAnimator.Play("FWalk");
+                    playerAnimator.SetFloat("Speed", -1f);
                 }
                 movement.x = (transform.right * 1 * Time.deltaTime).x;
             }
@@ -63,6 +60,10 @@ public class RamnzaAnimation : MonoBehaviour
             // {
             //     playerAnimator.Play("Idle");
             // }
+            if (playerAnimator.GetFloat("Speed") != 0f)
+            {
+                playerAnimator.SetFloat("Speed", 0f);
+            }
             FreezePosition();
         }
     }
