@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 059320edd2eec8845a92c65298714dc0
+guid: 68c83898c22debf4f92cadc34277d7e3
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -104,9 +104,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 746
-        width: 248
-        height: 278
+        y: 232
+        width: 329
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,10 +124,10 @@ TextureImporter:
       name: Attack2_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 468
-        width: 248
-        height: 278
+        x: 329
+        y: 232
+        width: 329
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,10 +145,10 @@ TextureImporter:
       name: Attack2_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 190
-        width: 248
-        height: 278
+        x: 658
+        y: 232
+        width: 329
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

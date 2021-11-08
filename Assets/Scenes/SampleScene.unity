@@ -637,6 +637,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ramnza
       objectReference: {fileID: 0}
+    - target: {fileID: 6846266927007006350, guid: 70097e1693c04d8439657354027e19f2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4723107735738678597, guid: 247385330b6ec4346b8823880b265b6d, type: 3}
+    - target: {fileID: 6846266927007006350, guid: 70097e1693c04d8439657354027e19f2, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6846266927007006351, guid: 70097e1693c04d8439657354027e19f2, type: 3}
       propertyPath: m_RootOrder
       value: 3
