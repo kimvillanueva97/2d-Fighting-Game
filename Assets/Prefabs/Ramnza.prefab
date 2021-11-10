@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6846266926408764845}
   - component: {fileID: 6846266926408764847}
   - component: {fileID: 6846266926408764846}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: EWeapon
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 6846266927007006346}
   - component: {fileID: 6846266927007006347}
   - component: {fileID: 6846266927007006388}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ramnza
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -183,8 +183,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 499722885
-  m_SortingLayer: 2
+  m_SortingLayerID: 361760345
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 4723107735738678597, guid: 247385330b6ec4346b8823880b265b6d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
