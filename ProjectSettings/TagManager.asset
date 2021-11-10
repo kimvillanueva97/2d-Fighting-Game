@@ -18,7 +18,7 @@ TagManager:
   - UI
   - Skill
   - Player
-  - 
+  - Background
   - 
   - 
   - 
@@ -48,4 +48,10 @@ TagManager:
     locked: 0
   - name: Skill
     uniqueID: 606342815
+    locked: 0
+  - name: Background
+    uniqueID: 499722885
+    locked: 0
+  - name: Player
+    uniqueID: 361760345
     locked: 0
