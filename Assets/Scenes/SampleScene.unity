@@ -296,7 +296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4464987406117850143, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Test Player
       objectReference: {fileID: 0}
     - target: {fileID: 4464987406117850143, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
       propertyPath: m_IsActive
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7f09cd0bc44e93149b4803338e2218dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c557042ae0bebb46984e830d77a5b3d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
