@@ -1,0 +1,20 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:d2b9dbadfabfa00a8a5de779f899ac4f:3c2dc78dc3452029d29c292ca23a7814:af57200393b292e6fb7e0e5d5add43bb$
+#
+:format=40300
+:texture=Forward.png
+:size=2048x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+Forward0001;0;199;389;313; 0.5;0.5; 0;0;0;0
+Forward0002;389;199;389;313; 0.5;0.5; 0;0;0;0
+Forward0003;778;199;389;313; 0.5;0.5; 0;0;0;0
+Forward0004;1167;199;389;313; 0.5;0.5; 0;0;0;0
+Forward0005;1556;199;389;313; 0.5;0.5; 0;0;0;0
