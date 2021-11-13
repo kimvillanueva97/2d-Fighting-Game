@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6846266926408764845}
   - component: {fileID: 6846266926408764847}
   - component: {fileID: 6846266926408764846}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Square
   m_TagString: EWeapon
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 6846266927007006346}
   - component: {fileID: 6846266927007006347}
   - component: {fileID: 6846266927007006388}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Ramnza
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 6846266927007006349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.645, y: -0.147, z: 0}
-  m_LocalScale: {x: 0.16597186, y: 0.153777, z: 1}
+  m_LocalScale: {x: 0.87415487, y: 0.87415487, z: 0.87415487}
   m_Children:
   - {fileID: 6846266926408764845}
   m_Father: {fileID: 0}
@@ -250,8 +250,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.024555173, y: -0.26502296}
-  m_Size: {x: 2.919553, y: 8.001211}
+  m_Offset: {x: -0.07163782, y: -0.04844222}
+  m_Size: {x: 0.97974527, y: 2.4316847}
   m_Direction: 0
 --- !u!114 &6846266927007006347
 MonoBehaviour:

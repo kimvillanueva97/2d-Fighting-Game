@@ -312,6 +312,11 @@ PrefabInstance:
       objectReference: {fileID: 1128107026765886277}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 030de12807b7e1048b8c937119871c7d, type: 3}
+--- !u!1 &147929203 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6846266927007006349, guid: 70097e1693c04d8439657354027e19f2, type: 3}
+  m_PrefabInstance: {fileID: 6846266928041549012}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &182554989
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,9 +405,10 @@ GameObject:
   - component: {fileID: 198847551}
   - component: {fileID: 198847552}
   - component: {fileID: 198847553}
+  - component: {fileID: 198847554}
   m_Layer: 0
   m_Name: Myrh
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -447,12 +453,12 @@ SpriteRenderer:
   m_SortingLayerID: 361760345
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7613102088142725279, guid: faff57d68d715a047be1c4ff474e164e, type: 3}
+  m_Sprite: {fileID: 815424164945274260, guid: 4d0133805da09494b9169f56dfc6301b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 12.15625, y: 10.3125}
+  m_Size: {x: 3.99, y: 3.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -528,6 +534,20 @@ CapsuleCollider2D:
   m_Offset: {x: -0.063162774, y: -0.34737545}
   m_Size: {x: 1.1651434, y: 2.5817144}
   m_Direction: 0
+--- !u!114 &198847554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198847548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1257a4a5bed2ef445a337e98a47292fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 198847548}
+  enemy: {fileID: 147929203}
 --- !u!1 &237751988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,10 +1835,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6846266926408764844, guid: 70097e1693c04d8439657354027e19f2, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6846266927007006347, guid: 70097e1693c04d8439657354027e19f2, type: 3}
       propertyPath: enemy
       value: 
@@ -1827,25 +1843,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ramnza
       objectReference: {fileID: 0}
-    - target: {fileID: 6846266927007006349, guid: 70097e1693c04d8439657354027e19f2, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6846266927007006351, guid: 70097e1693c04d8439657354027e19f2, type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6846266927007006351, guid: 70097e1693c04d8439657354027e19f2, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.87415487
-      objectReference: {fileID: 0}
-    - target: {fileID: 6846266927007006351, guid: 70097e1693c04d8439657354027e19f2, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.87415487
-      objectReference: {fileID: 0}
-    - target: {fileID: 6846266927007006351, guid: 70097e1693c04d8439657354027e19f2, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.87415487
       objectReference: {fileID: 0}
     - target: {fileID: 6846266927007006351, guid: 70097e1693c04d8439657354027e19f2, type: 3}
       propertyPath: m_LocalPosition.x
