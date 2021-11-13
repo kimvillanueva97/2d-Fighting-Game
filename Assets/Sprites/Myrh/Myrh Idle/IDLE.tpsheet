@@ -1,0 +1,19 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:00dff078059bfc419afc9edf0fc3f2fd:d4285ecd905d84dadea02a390db854a1:1cd79664531c14ed7865f051e66cab18$
+#
+:format=40300
+:texture=IDLE.png
+:size=2048x512
+:pivotpoints=enabled
+:borders=disabled
+:alphahandling=ClearTransparentPixels
+
+IDLE0001;0;200;389;312; 0.5;0.5; 0;0;0;0
+IDLE0002;389;200;389;312; 0.5;0.5; 0;0;0;0
+IDLE0003;778;200;389;312; 0.5;0.5; 0;0;0;0
+IDLE0004;1167;200;389;312; 0.5;0.5; 0;0;0;0
